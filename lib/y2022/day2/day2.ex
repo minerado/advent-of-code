@@ -1,21 +1,15 @@
 defmodule Aoc.Y2022.Day2 do
-  @moduledoc false
-
   @plays %{"A" => :roc, "B" => :pap, "C" => :sci, "X" => :roc, "Y" => :pap, "Z" => :sci}
   @orders %{"X" => :lose, "Y" => :draw, "Z" => :win}
 
   @play_score %{roc: 1, pap: 2, sci: 3}
 
-  @doc false
-  @spec solve1() :: pos_integer()
   def solve1 do
     data()
     |> Enum.map(&play1/1)
     |> Enum.sum()
   end
 
-  @doc false
-  @spec solve2() :: pos_integer()
   def solve2 do
     data()
     |> Enum.map(&play2/1)
