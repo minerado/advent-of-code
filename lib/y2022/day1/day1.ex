@@ -10,7 +10,7 @@ defmodule Aoc.Y2022.Day1 do
   def solve2, do: get_max_calories(data(), 3)
 
   defp data do
-    File.read!("./lib/y2022/day-1/day1-data.txt")
+    File.read!("./lib/y2022/day1/data.txt")
     |> String.split("\n\n")
     |> Enum.map(fn x ->
       x
